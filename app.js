@@ -1,3 +1,17 @@
+let cuenta = 0;
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  cuenta += 1;
+  console.log(Date.now() + " Ping Received" + " Bruh " + cuenta);
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 const fs = require('fs');
 const { prefix, token } = require('./config.json');     //Datos del config.json
 const Discord = require('discord.js');

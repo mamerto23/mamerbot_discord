@@ -4,6 +4,6 @@ module.exports = {
     args: false,
     soloServer: false,
     execute(mensaje, args) {
-        mensaje.channel.send('gnoP');
+        mensaje.channel.send('.gnoP');
     },
 };
